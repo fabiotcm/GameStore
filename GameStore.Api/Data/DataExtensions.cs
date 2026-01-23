@@ -1,15 +1,40 @@
-using System;
+using GameStore.Api.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace GameStore.Api.Data;
 
-// Escopo que dá acesso para capturar e criar uma instância do GameStoreContext e aplicar as migrations pendentes
 public static class DataExtensions
 {
+
+    // Escopo que dá acesso para capturar e criar uma instância do GameStoreContext e aplicar as migrations pendentes
     public static void MigrateDb(this WebApplication app)
     {
         using var scope = app.Services.CreateScope();
         var dbContext = scope.ServiceProvider.GetRequiredService<GameStoreContext>();
         dbContext.Database.Migrate();
+    }
+
+
+    public static void AddGameStoreDb(this WebApplicationBuilder builder)
+    {
+        var connectionString = "Data Source=GameStore.db";
+        builder.Services.AddSqlite<GameStoreContext>(
+            connectionString,
+            optionsAction: options => options.UseSeeding((context, _) =>
+            {
+                if (!context.Set<Genre>().Any())
+                {
+                    context.Set<Genre>().AddRange(
+                        new Genre { Name = "Fighting"},
+                        new Genre { Name = "RPG"},
+                        new Genre { Name = "Platform"},
+                        new Genre { Name = "Racing"},
+                        new Genre { Name = "Sports"}
+                    );
+
+                    context.SaveChanges();
+                }
+            })
+        );
     }
 }
