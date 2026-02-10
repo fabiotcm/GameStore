@@ -2399,19 +2399,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fabio.moura\\.nuget\\packages\\": {}
+    "C:\\Users\\Fábio\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fabio.moura\\Projetos\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Fábio\\Desktop\\github\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
       "projectName": "GameStore.Api",
-      "projectPath": "C:\\Users\\fabio.moura\\Projetos\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
-      "packagesPath": "C:\\Users\\fabio.moura\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fabio.moura\\Projetos\\GameStore\\GameStore.Api\\obj\\",
+      "projectPath": "C:\\Users\\Fábio\\Desktop\\github\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
+      "packagesPath": "C:\\Users\\Fábio\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Fábio\\Desktop\\github\\GameStore\\GameStore.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\fabio.moura\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Fábio\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
