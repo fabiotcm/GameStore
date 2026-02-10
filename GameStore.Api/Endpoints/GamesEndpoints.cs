@@ -11,13 +11,6 @@ public static class GamesEndpoints
 
     const string GetGameEndpointName = "GetGame";
 
-    // Mocked data
-    private static readonly List<GameSummaryDto> games = [
-        new (1, "Street Fighter II", "Fighting", 19.99M, new DateOnly(1992, 7, 15)),
-        new (2,  "Final Fantasy VII Rebirth", "RPG", 69.99M, new DateOnly(2024, 2, 29)),
-        new (3, "Astro Bot", "Platformer", 59.99M, new DateOnly(2024, 9, 6))
-    ]; 
-
     public static void MapGamesEndpoints(this WebApplication app)
     {
         var group = app.MapGroup("/games");
